@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+    background-image: url("../images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.auth{
+    padding-left: 40%;
+    padding-top:10%;
+}
+
+.button{
+    background-color: green;
+    text-align: center;
+    border: none;
+    padding: 10px 22px 10px;
+    text-decoration: none;    
+    margin: 2px 2px;
+    font-size: 18px;
+    
+}
+
+input[type=text], input[type=password]{
+    padding: 10px 22px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
