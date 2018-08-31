@@ -21,6 +21,7 @@ nav ul li a {
 }
 nav ul li a:hover {
 	background-color: tomato;
+	color: white;
 }
 nav ul li ul li {
 	display: none;
