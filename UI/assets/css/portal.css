@@ -1,4 +1,8 @@
-html, body{
+* {
+	margin: 0;
+}
+
+html, body {
     background-image: url("../images/auth.jpg");
     background-repeat: no-repeat;
     background-size:cover;
