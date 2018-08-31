@@ -2,12 +2,21 @@
 	margin: 0;
 }
 
+
 html, body {
     background-image: url("../images/auth.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     height:100%;
 }
+
+h1 {
+    color: white;
+}
+.container {
+    padding-top: 45px;
+}
+
 table{
     width: 100%;
     border-collapse: collapse;
