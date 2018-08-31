@@ -22,7 +22,7 @@ html, body {
     text-decoration: none;
     margin: 2px 2px;
     font-size: 18px;
-    
+
 }
 
 input[type=text], input[type=password]{
@@ -31,4 +31,10 @@ input[type=text], input[type=password]{
     border: 1px solid #ccc;
     width: 100%;
     box-sizing: border-box;
+}
+
+@media screen and (max-width: 200px) {
+    .column {
+        width: 100%;
+    }
 }

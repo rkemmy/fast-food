@@ -28,5 +28,9 @@ h1{
     font-family: Arial, Helvetica, sans-serif
 }
 
-
+@media screen and (max-width: 200px) {
+    .column {
+        width: 100%;
+    }
+}
 

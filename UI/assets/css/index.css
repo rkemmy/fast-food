@@ -61,3 +61,9 @@ h1 {
 	font-size: 30px;
 
 }
+
+@media screen and (max-width: 200px) {
+    .column {
+        width: 100%;
+    }
+}
