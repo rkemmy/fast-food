@@ -1,0 +1,33 @@
+html, body{
+    background-image: url("../images/auth.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: helvetica;
+}
+
+th ,td{
+    border: 1px solid black;
+    text-align:left;
+    font-size: 20px;
+    height:40px;
+    background: #dddddd;
+}
+th{
+    background: gray;
+}
+button{
+    float:right;
+    background-color: green;
+    border: none;
+    padding: 10px 22px 10px;
+    text-decoration: none;    
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-color: black;
+}
+
