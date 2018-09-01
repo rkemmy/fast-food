@@ -84,6 +84,10 @@ a {
 	text-decoration: none;
 	color: white;
 }
+.home {
+	pointer-events: none;
+	color: lawngreen;
+}
 
 @media screen and (max-width: 200px) {
     .column {
