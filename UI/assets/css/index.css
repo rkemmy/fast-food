@@ -57,10 +57,16 @@ nav a {
 h1 {
 	text-align: center;
 	color: white;
-	padding-top: 25%;
+	padding-top: 20%;
 	font-family: 'Elsie', cursive;
 	font-size: 40px;
 
+}
+h2 {
+	text-align: center;
+	color: white;
+	font-family: 'Elsie', cursive;
+	font-size: 40px;
 }
 
 .button{
