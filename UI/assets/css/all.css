@@ -1,10 +1,17 @@
+html {
+    background-color: #212529;
+}
+
 h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    float: left:
+    font-family: 'Montserrat', sans-serif;
+
+    color: white;
 }
 
 h3{
-    margin: auto
+    margin: auto;
+    color: white;
+    font-family: 'Sniglet', cursive;
 
 }
 
@@ -27,7 +34,7 @@ img {
     height: 300px;
 }
 .button{
-    background-color: tomato;
+    background-color: limegreen;
     text-align: center;
     border: none;
     padding: 10px 22px 10px;
@@ -39,7 +46,8 @@ img {
 
 a {
 	text-decoration: none;
-    color: black;
+    color: white;
+    font-family: 'Sniglet', cursive;
 }
 
 @media screen and (max-width: 200px) {
