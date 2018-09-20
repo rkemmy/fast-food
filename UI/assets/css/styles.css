@@ -1,6 +1,6 @@
 html,body {
     height: 100%;
-    width: 100%;
+	width: 100%;
 }
 
 body {
@@ -65,7 +65,7 @@ ul {
 }
 
 li {
-    display: inline-block;
+    /* display: inline-block; */
     margin-right: 2px;
     float: left;
  
@@ -119,7 +119,8 @@ li ul li a {
     float: left;
     width: 33.33%;
     align-content: center;
-    text-align: center;
+	text-align: center;
+	padding-bottom: 100px;
 
 }
 
@@ -135,7 +136,7 @@ li ul li a {
     }
 }
 
-.ReadMore {
+.OrderNow {
     color: white;
     background-color: red;
     /* border-style: solid; */
@@ -143,7 +144,7 @@ li ul li a {
     padding: 10px 30px 10px 30px;
     
 }
-.ReadMore:hover {
+.OrderNow:hover {
     background-color: orange;
     color: #000;
     border-color: #000;
@@ -178,5 +179,111 @@ li ul li a {
 
 .sticky + .content {
     padding-top: 30px;
+}
+
+#container{
+	width: 100%;
+    height: 100%;
+    color: #f0f0f0;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('../images/carrots-food-fresh-616404.jpg') no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    position: fixed;
+    width: 340px;
+    height: 480px;
+    top: 50%;
+    left: 50%;
+    margin-top: -240px;
+    margin-left: -170px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1)
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+    /* background: #ecf2f5; */
+}
+
+label {
+    color: #fff;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+p a {
+    font-size: 12px;
+    color: #fff;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+    /* -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease; */
+}
+
+p a:hover {
+    color: #f0ac;
+}
+
+input {
+    font-size: 12px;
+    outline: none;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 290px;
+    height: 35px;
+    
+    /* border: 1px solid #c7d0d2;
+    border-radius: 2px;
+    box-shadow: inset 0 1.5px 3px  rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8; */
+}
+
+#lower {
+    /* background: #ecf2f5; */
+    width: 100%;
+    height: 69px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+input[type=checkbox] {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.check {
+    margin-left: 3px;
+}
+
+input[type=submit] {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: orangered;
+    /* background-image: -webkit-gradient(linear, left-top, left-bottom, from(#acd6ef) to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0% #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%); */
+    border-radius: 30px;
+    border: 1px solid #66add6;
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5); */
+    cursor: pointer;
 }
 
