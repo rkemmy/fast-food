@@ -139,8 +139,6 @@ li ul li a {
 .OrderNow {
     color: white;
     background-color: red;
-    /* border-style: solid; */
-    
     padding: 10px 30px 10px 30px;
     
 }
@@ -154,6 +152,7 @@ li ul li a {
     overflow: hidden;
     background-color: #333;
     padding-left: 300px;
+    display: inherit;
 }
 
 .topnav a {
@@ -207,7 +206,6 @@ li ul li a {
 form {
     margin: 0 auto;
     margin-top: 20px;
-    /* background: #ecf2f5; */
 }
 
 label {
@@ -224,9 +222,6 @@ p a {
     float: right;
     margin-top: -13px;
     margin-right: 20px;
-    /* -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease; */
 }
 
 p a:hover {
@@ -247,13 +242,10 @@ input[type=text], input[type=password], input[type=email] {
     width: 290px;
     height: 35px;
     
-    /* border: 1px solid #c7d0d2;
-    border-radius: 2px;
-    box-shadow: inset 0 1.5px 3px  rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8; */
 }
 
 #lower {
-    /* background: #ecf2f5; */
+
     width: 100%;
     height: 69px;
     margin-top: 20px;
@@ -294,3 +286,47 @@ input[type=submit] {
  .zoom:hover {
     transform: scale(1.2)
  }
+
+ table{
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    /* float: initial; */
+    padding-left: 20%;
+}
+
+th ,td{
+    text-align:left;
+    font-size: 20px;
+    height:40px;
+}
+
+th{
+    background: gray;
+}
+
+.container {
+    padding-bottom: 0px; 
+}
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    /* align-content: center; */
+    float: initial;
+    padding-left: 50px;   
+}
+
+@media screen and (max-width: 600px) {
+    .topnav{
+        padding: 0px;
+    }
+}
+
+.check 
+{
+    padding-bottom:20px; 
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
