@@ -4,42 +4,113 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../../assets/css/portal.css" rel="stylesheet">
-        <link href="../../assets/css/nav.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Elsie|Sniglet" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="../../assets/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../admin/status.html">STATUS PANEL</a></li>
-                <li><a href="../all.html">ORDERS</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <h1>Current Orders</h1>
+        <div class="topnav" id="navbar">
+            <a href="../index.html">Home</a>
+            <a href="#">Meals</a>
+            <a href="#">Profile</a>
+            <a href="admin/portal.html">Admin</a>
+            <a href="../login.html">Login </a>
+            <a href="../signup.html">Sign Up</a>
         </div>
+        <div class="container">
+            <center>
+                    <h1>All Orders</h1>
+            </center>
+           
+        </div>
+<div class="table-container">
 
-        <br>
+
         <table>
             <tr>
-            <th>Order</th>
-            <th>Username</th>
-            <th>Time</th>
-            <th>Status</th>
-            <th>Content</th>
+                <th>Date</th>
+                <th>Qty</th>
+                <th>Order-id</th>
+                <th>Order-Name</th>
+                <th>Username</th>
+                <th>Address</th>
+                <th>Approve</th>
+                <th>Status</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>2</td>
+                <td>001</td>
+                <td>Pizza</td>
+                <td>remmy</td>
+                <td>Kasarani</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
             </tr>
             <tr>
-            <td>Cheese Burger</td>
-            <td>Remmy</td>
-            <td>12.07pm</td>
-            <td><button id="g" class="button" type="submit"><a href="portal.html" style="color:green">Completed</a></button></td>
-            <td><button class="button" type="submit"><a href="portal.html">Delete</a></button></td>
+                <td>Sat-08-2018</td>
+                <td>2</td>
+                <td>001</td>
+                <td>Pizza</td>
+                <td>remmy</td>
+                <td>Kasarani</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
             </tr>
-            <tr></tr>
-            <tr></tr>
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>2</td>
+                <td>001</td>
+                <td>Pizza</td>
+                <td>remmy</td>
+                <td>Kasarani</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>2</td>
+                <td>001</td>
+                <td>Pizza</td>
+                <td>remmy</td>
+                <td>Kasarani</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>2</td>
+                <td>001</td>
+                <td>Pizza</td>
+                <td>remmy</td>
+                <td>Kasarani</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
         </table>
-
+    </div>
     </body>
 </html>
