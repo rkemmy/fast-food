@@ -140,6 +140,7 @@ li ul li a {
     color: white;
     background-color: red;
     padding: 10px 30px 10px 30px;
+    font-size: 14px;
     
 }
 .OrderNow:hover {
@@ -151,7 +152,7 @@ li ul li a {
 .topnav {
     overflow: hidden;
     background-color: #333;
-    padding-left: 300px;
+    /* padding-left: 400px; */
     display: inherit;
 }
 
@@ -329,4 +330,68 @@ th{
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+/* h3 {
+    float: left;
+} */
+
+.addOrder {
+    font-size: 20px;
+    padding: 10px;
+    background: gray;
+    border-radius: 20px;
+    border: none;
+
+}
+ 
+.addOrder:focus{
+    outline:0;
+}
+.addOrder:hover 
+{
+    animation-delay: .2s;
+    background-color: gray;
+    color: #ffffff;
+
+}
+.buttons 
+{
+    padding-bottom: 20px;
+}
+
+.price {
+    border-radius: 30px;
+    font-size: 14px;
+    background: red;
+    height: 35px;
+    color: white;
+    pointer-events: none
+}
+
+img {
+    height: 200px;
+}
+
+h2 {
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 50px;
+    padding-left: 250px;
+    padding-top: 80px;  
+}
+
+span {
+    float: left;
+    padding-right: 200px;
+    pointer-events: none;
+    color: red;
+}
+
+.food {
+    font-size: 60px;
+}
+h5 {
+    padding-top: 0;
+    
 }
