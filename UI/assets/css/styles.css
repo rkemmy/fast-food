@@ -1,0 +1,369 @@
+html,body {
+    height: 100%;
+	width: 100%;
+}
+
+body {
+    font-size: 20px;
+    background: #fff;
+    line-height: 1.55;
+}
+
+.banner {
+    height: 60vh;
+    background:  linear-gradient(
+        rgba(100, 100, 100, 0.5),
+        rgba(100, 100, 100, 0.5)
+      ),url('../images/banner.jpg')no-repeat center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-width: 100%;
+      display: flex;
+      font-weight: bold;
+}
+.today-specials {
+    height: 50vh;
+    background-color: #fff;
+}
+
+.menu {
+    height: 50vh;
+    background-color: red;
+}
+
+.col.four {
+    width: 25%;
+    float: left;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+li {
+    margin-right: 2px;
+    float: left;
+ 
+}
+
+li a {
+    display: block;
+    min-height: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    background: inherit;
+    text-decoration: none;
+    border-spacing: 1em;
+    word-spacing: 3em;
+}
+
+li:hover a{
+    background: red;
+}
+
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+
+li ul {
+    display: none;
+}
+
+li ul li {
+    display: block;
+    float: none;
+}
+
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    align-content: center;
+	text-align: center;
+	padding-bottom: 100px;
+
+}
+
+.row:after {
+    content: inherit;
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.OrderNow {
+    color: white;
+    background-color: red;
+    padding: 10px 30px 10px 30px;
+    font-size: 14px;
+    
+}
+.OrderNow:hover {
+    background-color: orange;
+    color: #000;
+    border-color: #000;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    display: inherit;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 30px;
+}
+
+#container{
+	width: 100%;
+    height: 100%;
+    color: #f0f0f0;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('../images/carrots-food-fresh-616404.jpg') no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    position: fixed;
+    width: 340px;
+    height: 480px;
+    top: 50%;
+    left: 50%;
+    margin-top: -240px;
+    margin-left: -170px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1)
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+label {
+    color: #fff;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+p a {
+    font-size: 12px;
+    color: #fff;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+}
+
+p a:hover {
+    color: #f0ac;
+}
+
+input {
+    font-size: 12px;
+    outline: none;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 290px;
+    height: 35px;
+    
+}
+
+#lower {
+
+    width: 100%;
+    height: 69px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+input[type=checkbox] {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.check {
+    margin-left: 3px;
+}
+
+input[type=submit] {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: orangered;
+    border-radius: 30px;
+    border: 1px solid #66add6;
+    cursor: pointer;
+}
+.zoom {
+    transition: transform .2s;
+    z-index: 2;
+} 
+
+ .zoom:hover {
+    transform: scale(1.2)
+ }
+
+ table{
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    /* float: initial; */
+    padding-left: 20%;
+}
+
+th ,td{
+    text-align:left;
+    font-size: 20px;
+    height:40px;
+}
+
+th{
+    background: gray;
+}
+
+.container {
+    padding-bottom: 0px; 
+}
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    float: initial;
+    padding-left: 50px;   
+}
+
+@media screen and (max-width: 600px) {
+    .topnav{
+        padding: 0px;
+    }
+}
+
+.check 
+{
+    padding-bottom:20px; 
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+.addOrder {
+    font-size: 20px;
+    padding: 10px;
+    background: gray;
+    border-radius: 20px;
+    border: none;
+
+}
+ 
+.addOrder:focus{
+    outline:0;
+}
+.addOrder:hover 
+{
+    animation-delay: .2s;
+    background-color: gray;
+    color: #ffffff;
+
+}
+.buttons 
+{
+    padding-bottom: 20px;
+}
+
+.price {
+    border-radius: 30px;
+    font-size: 14px;
+    background: red;
+    height: 35px;
+    color: white;
+    pointer-events: none
+}
+
+img {
+    height: 200px;
+}
+
+h2 {
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 50px;
+    padding-left: 250px;
+    padding-top: 80px;  
+}
+
+span {
+    float: left;
+    padding-right: 200px;
+    pointer-events: none;
+    color: red;
+}
+
+.food {
+    font-size: 60px;
+}
+h5 {
+    padding-top: 0;
+    
+}
