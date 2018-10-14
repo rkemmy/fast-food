@@ -6,7 +6,7 @@ signup.onclick = function () {
   const password = document.getElementById('password').value;
 
 
-  fetch('http://127.0.0.1:5000/api/v2/auth/signup', {
+  fetch('https://mealani.herokuapp.com/api/v2/auth/signup', {
     method: 'POST',
     mode: 'cors',
     headers: {
@@ -18,7 +18,7 @@ signup.onclick = function () {
       email,
       password
     })
-    // "confirm_password":confirm_password
+   
   })
     .then(res => res.json())
     .then(data => {
@@ -28,7 +28,6 @@ signup.onclick = function () {
         document.getElementById('username').value = '';
         document.getElementById('email').value = '';
         document.getElementById('password').value = '';
-        // document.getElementById('confirmPassword').value = "";
         redirect: window.location.replace('../html/login.html');
       }
       else {
