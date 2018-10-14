@@ -4,7 +4,7 @@ login.onclick = function(){
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
 
-    fetch('http://127.0.0.1:5000/api/v2/auth/login',{
+    fetch('https://mealani.herokuapp.com/api/v2/auth/login',{
         method:'POST',
         mode:'cors',
         headers:{
@@ -20,15 +20,18 @@ login.onclick = function(){
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        console.log(data['message'])
-        let leon = 'You were successfully logged in ' + username;
-        console.log(leon)
-        if (data['message'] === leon){
+        let msg = 'You were successfully logged in ' + username;
+        if (data['message'] === msg){
             document.getElementById('username').value = "";
-            document.getElementById('password').value = "";
+            document.getElementById('password').value = "";``
             window.localStorage.setItem('token', data['token'])
+            window.localStorage.setItem('username', username)
+           
+
             redirect: window.location.replace("../html/index.html")
-        
+            window.localStorage.setItem('message', msg);
+            elem = document.getElementById('dialogbox')
+            
             if (data["admin"] === true){
                 redirect: window.location.replace("../html/admin/portal.html")
             }
@@ -43,3 +46,4 @@ login.onclick = function(){
         }
     })
 }
+
