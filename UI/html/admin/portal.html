@@ -9,51 +9,118 @@
     </head>
     <body>
         <div class="topnav" id="navbar">
-            <a href="../index.html" class="food" style="color:red;">Fast-Food-Fast</a>
-            <a href="add.html">Add Meal</a>
-            <a href="meals.html">AdminMeals </a>
-            <div id="loginSignup"></div>
+            <a href="../index.html">Home</a>
+            <a href="#">Profile</a>
+            <a href="../admin/portal.html">Admin</a>
+            <a href="../login.html">Login </a>
+            <a href="../signup.html">Sign Up</a>
         </div>
-        
         <div class="container">
-            <div class="row">
-                <center>
+                <div class="row">
+            <center>
                     <h1>All Orders</h1>
-                    <div class="buttons">                  
-                    <a href="../admin/add.html" style="text-decoration: none;"><button class="addOrder">Create Food Item</button></a>                  
-                    </div>
-                </center>           
-            </div>
-        </div>
-        <div class="table-container" id="row">
-            <table>
-                <tr>
-                    <th>Order-id</th>
-                    <th>Order-Name</th>
-                    <th>Username</th>
-                    <th>Price</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>${res['id']}</td>
-                    <td>${res['title']}</td>
-                    <td>${res['username']}</td>
-                    <td>${res['price']}</td>
-                    <td>
-                        <select>
-                            <option value="new" selected>New</option>
-                            <option value="processing">Processing</option>
-                            <option value="complete">Complete</option>
-                            
-                        </select>
-                        <td>
-                        <button type="submit" value="cancelled">Cancelled</button>
-                        </td>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                    <!-- <h3>Add Order</h3> -->
+                    <div class="buttons">
 
-    <script src="../../assets/js/orders.js"></script>
+                   
+                    <a href="../add.html" style="text-decoration: none;"><button class="addOrder">Create Food Item</button></a>
+                    
+                    </div>
+            </center>
+          
+                   
+            </div>
+        
+        </div>
+<div class="table-container">
+
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Qty</th>
+                <th>Order-id</th>
+                <th>Order-Name</th>
+                <th>Username</th>
+                <th>Address</th>
+                <th>Approve</th>
+                <th>Status</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>1</td>
+                <td>001</td>
+                <td>Pizza</td>
+                <td>remmy</td>
+                <td>Runda</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>2</td>
+                <td>002</td>
+                <td>Fillet</td>
+                <td>kemunto</td>
+                <td>Kasarani</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>3</td>
+                <td>003</td>
+                <td>Chicken</td>
+                <td>risper</td>
+                <td>Thika</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Completed</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>2</td>
+                <td>004</td>
+                <td>Bagel</td>
+                <td>nyabiba</td>
+                <td>Westlands</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Pending</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            <tr>
+                <td>Sat-08-2018</td>
+                <td>5</td>
+                <td>005</td>
+                <td>Buger</td>
+                <td>remmy</td>
+                <td>Rongai</td>
+                <td class="check">
+                    <input type="checkbox" name="order" value="Order">
+                </td>
+                <td>Completed</td>
+                <td><i class="far fa-edit"></i></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+        </table>
+    </div>
     </body>
 </html>
