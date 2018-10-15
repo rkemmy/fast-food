@@ -1,3 +1,3 @@
 <?php
-include_once("UI/html/index.html");
+include_once("index.html");
 ?>
