@@ -28,7 +28,7 @@ signup.onclick = function () {
         document.getElementById('username').value = '';
         document.getElementById('email').value = '';
         document.getElementById('password').value = '';
-        redirect: window.location.replace('../html/login.html');
+        redirect: window.location.replace('login.html');
       }
       else {
         document.getElementById('username').value = '';

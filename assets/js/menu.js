@@ -67,7 +67,7 @@ function createOrder(name){
   .then(data =>{
       console.log(data)
       alert(data["message"])
-      redirect: window.location.replace('../html/index.html');
+      redirect: window.location.replace('index.html');
   })
 }
 

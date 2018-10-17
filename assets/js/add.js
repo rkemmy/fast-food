@@ -1,9 +1,14 @@
 window.onload = function () {
 
-  if (window.localStorage.getItem('username') == 'Useradmin'){
-    console.log('oyas')
-      window.location = "index.html"
+  if (window.localStorage.getItem('username') !== 'Useradmin'){
+      window.location = "../index.html"
   }
+  if (window.localStorage.getItem('username') == null){
+    document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Login </a>`;
+}
+  else{
+    document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Logout</a>`;
+}
 
   var addMeal = document.getElementById('addmeal');
 
@@ -28,12 +33,13 @@ window.onload = function () {
         price,
       })
     })
-    console.log(data)
+    // console.log(data)
       .then(res => res.json())
       .then(data => {
         if (data['message'] === 'Meal successfully created') {
+          alert('Meal successfully created')
           // clear the form
-          redirect: window.location.replace("../menu.html");
+          redirect: window.location.replace("meals.html");
         }
         else {
           alert('Meal has been not been created, try again')

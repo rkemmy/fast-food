@@ -33,10 +33,10 @@ login.onclick = function(){
             elem = document.getElementById('dialogbox')
             
             if (data["admin"] === true){
-                redirect: window.location.replace("../html/admin/portal.html")
+                redirect: window.location.replace("admin/portal.html")
             }
             else{
-                redirect: window.location.replace("../html/index.html")
+                redirect: window.location.replace("index.html")
             }
         }
 

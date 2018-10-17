@@ -1,12 +1,11 @@
 window.onload = function () {
     if (window.localStorage.getItem('username') == null){
-        document.getElementById('signin').innerHTML = "Sign in";
+        document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Login </a>`;
     }
     else{
-        // document.getElementById('username').innerHTML = "Hello " + window.localStorage.getItem('username')
-        document.getElementById('signin').innerHTML = "Log out";
-        
+        document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Logout</a>`;
     }
+
 
     fetch('https://mealani.herokuapp.com/api/v2/menu', {
       method: 'GET',
@@ -61,16 +60,15 @@ window.onload = function () {
     })
   }
 
-  var logout = document.getElementById('signin')
-  logout.onclick = function(){
-      if (window.localStorage.getItem('username') == null){
-          redirect: window.location.replace("./login.html");
-      }
-  
-      else{
-          localStorage.clear();
-          redirect: window.location.replace("./login.html");
-      }
-  }
+// var logout =  document.getElementById('loginSignup')
+// logout.onclick = function(){
+//     if (window.localStorage.getItem('username') == null){
+//         redirect: window.location.replace(".login.html");
+//     }
+//     else{
+//         localStorage.clear();
+//         redirect: window.location.replace(".index.html")
+//     }
+// }
   
   
