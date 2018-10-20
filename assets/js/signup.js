@@ -22,7 +22,6 @@ signup.onclick = function () {
   })
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       if (data['message'] === 'Account created successfully') {
         alert(`Welcome ${username}, you may now Login`);
         document.getElementById('username').value = '';
@@ -30,13 +29,32 @@ signup.onclick = function () {
         document.getElementById('password').value = '';
         redirect: window.location.replace('login.html');
       }
+
+      else if(data['message'] === 'username already in use' ) {
+        document.getElementById('usernamefailed').innerHTML = "username already in use";
+        document.getElementById('usernamefailed').style.color = "red";
+        document.getElementById('username').value = '';
+
+      }
+
+      else if(data['message'] === 'email already in use' ) {
+        document.getElementById('emailfailed').innerHTML = "email address already in use";
+        document.getElementById('emailfailed').style.color = "red";
+        document.getElementById('email').value = '';
+
+      }
+
       else {
         document.getElementById('username').value = '';
         document.getElementById('email').value = '';
         document.getElementById('password').value = '';
         document.getElementById('confirmPassword').value = '';
+      
       }
     })
+
+    
+
     .catch(function(error){
       console.log(error);
     });
