@@ -1,60 +1,51 @@
-window.onload = function () {
 
-  if (window.localStorage.getItem('username') == null) {
-    document.getElementById('loginSignup').innerHTML = `<a href="login.html">Login </a>`;
-  }
-  else {
-    document.getElementById('loginSignup').innerHTML = `<a href="login.html">Logout</a>`;
-    document.getElementById('account').innerHTML = window.localStorage.getItem('username');
-  }
-
-  if (window.localStorage.getItem('message')) {
-    meso = window.localStorage.getItem('message');
-    elem = document.getElementById('login-dialogbox');
-    elem.innerHTML = `${meso}`;
-    window.localStorage.removeItem('message');
-    setTimeout(() => {
-      elem.style.display = "None";
-    }, 2000);
-  }
-
-
-
-  fetch('http://127.0.0.1:5000/api/v2/menu', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + window.localStorage.getItem('token')
-    }
-  })
-    .then(res => res.json())
-    .then(data => {
-      let output = '';
-
-      data['food_items'].forEach(item => {
-        output += `
-          <div class="column styled-item">
-              <p>
-                  <img src="${images[item.img] || images["default"]}" alt="image">
-              </p>
-              <button class="price">${item["price"]}</button>
-              <p>
-                  ${item["name"]}
-              </p>
-              <p>
-              ${item["description"]}
-              </p>
-              <button id="orderMeal" class="OrderNow"  onclick="createOrder('${item["name"]}')">Order Now</button>
-          </div>`
-      })
-
-      document.getElementById("row").innerHTML = output;
-
-    })
-    .catch(function(error){
-      console.log(error);
-    })
+if (window.localStorage.getItem('message')) {
+  meso = window.localStorage.getItem('message');
+  elem = document.getElementById('login-dialogbox');
+  elem.innerHTML = `${meso}`;
+  window.localStorage.removeItem('message');
+  setTimeout(() => {
+    elem.style.display = "None";
+  }, 2000);
 }
+
+
+
+fetch('http://127.0.0.1:5000/api/v2/menu', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + window.localStorage.getItem('token')
+  }
+})
+  .then(res => res.json())
+  .then(data => {
+    let output = '';
+
+    data['food_items'].forEach(item => {
+      output += `
+        <div class="column styled-item">
+            <p>
+                <img src="${images[item.img] || images["default"]}" alt="image">
+            </p>
+            <button class="price">${item["price"]}</button>
+            <p>
+                ${item["name"]}
+            </p>
+            <p>
+            ${item["description"]}
+            </p>
+            <button id="orderMeal" class="OrderNow"  onclick="createOrder('${item["name"]}')">Order Now</button>
+        </div>`
+    })
+
+    document.getElementById("row").innerHTML = output;
+
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+
 
 
 function createOrder(name) {

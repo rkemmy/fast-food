@@ -344,11 +344,15 @@ h2 {
     padding-top: 80px;  
 }
 
-span {
+#logo{
     float: left;
-    padding-right: 200px;
-    pointer-events: none;
-    color: red;
+    font-size: 18px;
+    /* padding-right: 200px; */
+    /* pointer-events: none; */
+    color: orange;
+}
+#logo:hover {
+    color: tomato;
 }
 
 .food {
