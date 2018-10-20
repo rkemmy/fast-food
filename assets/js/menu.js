@@ -1,38 +1,40 @@
 window.onload = function () {
 
-    if (window.localStorage.getItem('username') == null){
-        document.getElementById('loginSignup').innerHTML = `<a href="login.html">Login </a>`;
-    }
-    else{
-        document.getElementById('loginSignup').innerHTML = `<a href="login.html">Logout</a>`;
-    }
+  if (window.localStorage.getItem('username') == null) {
+    document.getElementById('loginSignup').innerHTML = `<a href="login.html">Login </a>`;
+  }
+  else {
+    document.getElementById('loginSignup').innerHTML = `<a href="login.html">Logout</a>`;
+  }
 
-    if (window.localStorage.getItem('message')) {
-        meso = window.localStorage.getItem('message');
-        elem = document.getElementById('dialogbox')
-        elem.innerHTML = `${meso}`;
-        window.localStorage.removeItem('message');
-        setTimeout(() => {
-            elem.parentNode.removeChild(elem);
-        }, 2000);
-    }
+  if (window.localStorage.getItem('message')) {
+    meso = window.localStorage.getItem('message');
+    elem = document.getElementById('dialogbox')
+    elem.innerHTML = `${meso}`;
+    window.localStorage.removeItem('message');
+    setTimeout(() => {
+      elem.parentNode.removeChild(elem);
+    }, 2000);
+  }
 
-  fetch('https://mealani.herokuapp.com/api/v2/menu', {
+
+
+  fetch('http://127.0.0.1:5000/api/v2/menu', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + window.localStorage.getItem('token')
     }
   })
-  .then(res => res.json())
-  .then(data => {
-    let output = '';
+    .then(res => res.json())
+    .then(data => {
+      let output = '';
 
-    data['food_items'].forEach(item => {
-      output += `
+      data['food_items'].forEach(item => {
+        output += `
           <div class="column">
               <p>
-                  <img class="zoom" src="../assets/images/rice.jpeg" alt="">
+                  <img class="zoom" src="${images[item.img] || images["default"]}" alt="image">
               </p>
               <button class="price">${item["price"]}</button>
               <p>
@@ -43,42 +45,58 @@ window.onload = function () {
               </p>
               <button id="orderMeal" class="OrderNow"  onclick="createOrder('${item["name"]}')">Order Now</button>
           </div>`
-    })
-
-    document.getElementById("row").innerHTML = output;
-
-  })
-}
-
-function createOrder(name){
-  console.log(name)
-  fetch('https://mealani.herokuapp.com/api/v2/users/orders',{
-      method:"POST",
-      mode:'cors',
-      headers:{
-          'Content-Type': 'application/json',
-          'Authorization' : 'Bearer ' + window.localStorage.getItem('token')
-      }, 
-      body: JSON.stringify({
-          "name":name
       })
-  })
-  .then(res=>res.json())
-  .then(data =>{
-      console.log(data)
-      alert(data["message"])
-      redirect: window.location.replace('index.html');
-  })
+
+      document.getElementById("row").innerHTML = output;
+
+    })
+    .catch(function(error){
+      console.log(error);
+    })
 }
 
 
-var logout =  document.getElementById('loginSignup')
-logout.onclick = function(){
-    if (window.localStorage.getItem('username') == null){
-        redirect: window.location.replace(".login.html");
-    }
-    else{
-        localStorage.clear();
-        redirect: window.location.replace(".index.html")
-    }
+function createOrder(name) {
+    if (window.localStorage.username === "Useradmin") {
+    alert("Admin cannot place an order")
+    redirect: window.location.replace("admin/portal.html");
+    
+  }
+  else {
+
+    fetch('http://127.0.0.1:5000/api/v2/users/orders', {
+      method: "POST",
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + window.localStorage.getItem('token')
+      },
+      body: JSON.stringify({
+        "name": name
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        alert(data["message"])
+        redirect: window.location.replace('index.html');
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+  }
+
+}
+
+
+var logout = document.getElementById('loginSignup')
+logout.onclick = function () {
+  if (window.localStorage.getItem('username') == null) {
+    redirect: window.location.replace(".login.html");
+  }
+  else {
+    localStorage.clear();
+    redirect: window.location.replace(".index.html")
+  }
 }
