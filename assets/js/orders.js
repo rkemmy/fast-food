@@ -1,6 +1,14 @@
 window.onload = function () {
 
-  fetch('https://mealani.herokuapp.com/api/v2/users/orders', {
+  if (window.localStorage.getItem('username') == null){
+    document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Login </a>`;
+  }
+  else{
+      document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Logout</a>`;
+  }
+
+
+  fetch('http://127.0.0.1:5000/api/v2/users/orders', {
     method: 'GET',
     mode: 'cors',
     headers: {
@@ -68,7 +76,7 @@ function status_listener(id){
 } 
 
 function update_status(id, status){
-    fetch(`https://mealani.herokuapp.com/api/v2/users/orders/${id}`,{
+    fetch(`http://127.0.0.1:5000/api/v2/users/orders/${id}`,{
         method:"PUT",
         mode:'cors',
         headers:{
@@ -88,4 +96,15 @@ function update_status(id, status){
     .catch(function(error){
       console.log(error)
     })
+}
+
+var logout =  document.getElementById('loginSignup')
+logout.onclick = function(){
+    if (window.localStorage.getItem('username') == null){
+        redirect: window.location.replace(".login.html");
+    }
+    else{
+        localStorage.clear();
+        redirect: window.location.replace(".index.html")
+    }
 }
