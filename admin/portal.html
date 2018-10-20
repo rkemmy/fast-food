@@ -11,7 +11,7 @@
         <div class="topnav" id="navbar">
             <a href="../index.html" class="food" style="color:red;">Fast-Food-Fast</a>
             <a href="add.html">Add Meal</a>
-            <a href="meals.html">AdminMeals </a>
+            <a href="meals.html">Meals </a>
             <div id="loginSignup"></div>
         </div>
         
@@ -26,32 +26,7 @@
             </div>
         </div>
         <div class="table-container" id="row">
-            <table>
-                <tr>
-                    <th>Order-id</th>
-                    <th>Order-Name</th>
-                    <th>Username</th>
-                    <th>Price</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>${res['id']}</td>
-                    <td>${res['title']}</td>
-                    <td>${res['username']}</td>
-                    <td>${res['price']}</td>
-                    <td>
-                        <select>
-                            <option value="new" selected>New</option>
-                            <option value="processing">Processing</option>
-                            <option value="complete">Complete</option>
-                            
-                        </select>
-                        <td>
-                        <button type="submit" value="cancelled">Cancelled</button>
-                        </td>
-                    </td>
-                </tr>
-            </table>
+            
         </div>
 
     <script src="../../assets/js/orders.js"></script>
