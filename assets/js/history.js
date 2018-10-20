@@ -13,7 +13,7 @@ fetch('http://127.0.0.1:5000/api/v2/users/history', {
         output += `
             <div class="column">
                 <p>
-                    <img class="zoom" src="../assets/images/rice.jpeg" alt="">
+                    <img src="../assets/images/rice.jpeg" alt="">
                 </p>
                 <p>
                     ${item["name"]}

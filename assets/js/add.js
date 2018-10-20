@@ -17,7 +17,7 @@ window.onload = function () {
     const name = document.getElementById('name').value;
     const description = document.getElementById('description').value;
     const price = Number(document.getElementById('price').value);
-    console.log(typeof(price));
+    
 
     fetch('http://127.0.0.1:5000/api/v2/menu', {
       method: 'POST',
@@ -35,10 +35,13 @@ window.onload = function () {
     // console.log(data)
       .then(res => res.json())
       .then(data => {
-        if (data['message'] === 'Meal successfully created') {
-          alert('Meal successfully created')
-          // clear the form
-          redirect: window.location.replace("meals.html");
+        let mesg = 'Meal successfully created'      
+        if (data['message'] === mesg) {
+          let addEelem = document.getElementById('add-dialogbox')
+          addEelem.innerHTML = mesg;
+          setTimeout(() => {
+            redirect: window.location.replace("meals.html");
+          }, 2500);
         }
         else {
           alert('Meal has been not been created, try again')

@@ -9,11 +9,11 @@ window.onload = function () {
 
   if (window.localStorage.getItem('message')) {
     meso = window.localStorage.getItem('message');
-    elem = document.getElementById('dialogbox')
+    elem = document.getElementById('login-dialogbox')
     elem.innerHTML = `${meso}`;
     window.localStorage.removeItem('message');
     setTimeout(() => {
-      elem.parentNode.removeChild(elem);
+      elem.style.display = "None";
     }, 2000);
   }
 
@@ -34,7 +34,7 @@ window.onload = function () {
         output += `
           <div class="column">
               <p>
-                  <img class="zoom" src="${images[item.img] || images["default"]}" alt="image">
+                  <img src="${images[item.img] || images["default"]}" alt="image">
               </p>
               <button class="price">${item["price"]}</button>
               <p>

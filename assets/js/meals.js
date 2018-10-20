@@ -6,7 +6,6 @@ window.onload = function () {
         document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Logout</a>`;
     }
 
-
     fetch('http://127.0.0.1:5000/api/v2/menu', {
       method: 'GET',
       mode: 'cors',
@@ -18,13 +17,11 @@ window.onload = function () {
     .then(res => res.json())
     .then(data => {
       let output = '';
-      console.log(data)
-  
       data['food_items'].forEach(item => {
         output += `
-            <div class="column">
+            <div class="column styled-item">
                 <p>
-                  <img class="zoom" src="${images[item.img] || images["default"]}" alt="image">
+                  <img src="${images[item.img] || images["default"]}" alt="image">
                 </p>
                 <button class="price">${item["price"]}</button>
                 <p>
