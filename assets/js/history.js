@@ -1,4 +1,4 @@
-fetch('https://mealani.herokuapp.com/api/v2/users/history', {
+fetch('http://127.0.0.1:5000/api/v2/users/history', {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -28,6 +28,9 @@ fetch('https://mealani.herokuapp.com/api/v2/users/history', {
       document.getElementById("row").innerHTML = output;
   
     })
+    .catch(function(error){
+        console.log(error);
+      })
 
   var logout = document.getElementById('signin')
   logout.onclick = function(){

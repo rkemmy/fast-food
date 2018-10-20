@@ -1,4 +1,4 @@
-fetch('https://mealani.herokuapp.com/api/v2/users/history', {
+fetch('http://127.0.0.1:5000/api/v2/users/history', {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -8,7 +8,6 @@ fetch('https://mealani.herokuapp.com/api/v2/users/history', {
     })
     .then(res => res.json())
     .then(data => {
-        // console.log("data", data.orders)
       let output = ` <table id="cartable">
       <tr>
       <th>Order-id</th>
@@ -40,4 +39,8 @@ fetch('https://mealani.herokuapp.com/api/v2/users/history', {
     </tr>`
       document.getElementById("cart-items").innerHTML = output;
   
+    })
+
+    .catch(function(error){
+      console.log(error);
     })
