@@ -5,11 +5,12 @@ window.onload = function () {
   }
   else {
     document.getElementById('loginSignup').innerHTML = `<a href="login.html">Logout</a>`;
+    document.getElementById('account').innerHTML = window.localStorage.getItem('username');
   }
 
   if (window.localStorage.getItem('message')) {
     meso = window.localStorage.getItem('message');
-    elem = document.getElementById('login-dialogbox')
+    elem = document.getElementById('login-dialogbox');
     elem.innerHTML = `${meso}`;
     window.localStorage.removeItem('message');
     setTimeout(() => {
@@ -32,7 +33,7 @@ window.onload = function () {
 
       data['food_items'].forEach(item => {
         output += `
-          <div class="column">
+          <div class="column styled-item">
               <p>
                   <img src="${images[item.img] || images["default"]}" alt="image">
               </p>
