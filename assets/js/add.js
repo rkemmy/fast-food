@@ -13,17 +13,15 @@ window.onload = function () {
   var addMeal = document.getElementById('addmeal');
 
   addMeal.onclick = function () {
-    // const img = document.getElementById('image').value;
+    const img = document.getElementById('imageField').value;
     const name = document.getElementById('name').value;
     const description = document.getElementById('description').value;
     const price = Number(document.getElementById('price').value);
     console.log(typeof(price));
 
-    fetch('https://mealani.herokuapp.com/api/v2/menu', {
+    fetch('http://127.0.0.1:5000/api/v2/menu', {
       method: 'POST',
-      mode: 'cors',
       headers: {
-        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + window.localStorage.getItem('token')
       },
@@ -31,6 +29,7 @@ window.onload = function () {
         name,
         description,
         price,
+        img
       })
     })
     // console.log(data)
@@ -49,5 +48,16 @@ window.onload = function () {
       .catch(function(error){
         console.log()
       })
-  };
+  }
+}
+
+var logout =  document.getElementById('loginSignup')
+logout.onclick = function(){
+    if (window.localStorage.getItem('username') == null){
+        redirect: window.location.replace(".login.html");
+    }
+    else{
+        localStorage.clear();
+        redirect: window.location.replace(".index.html")
+    }
 }

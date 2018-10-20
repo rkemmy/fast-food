@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
+    <div class="topnav" id="navbar">
+        <a href="../index.html" class="food" style="color:red;">Fast-Food-Fast</a>
+        <a href="add.html">Add Meal</a>
+        <a href="meals.html">AdminMeals </a>
+        <div id="loginSignup"></div>
+    </div>
     <div class="container" id="container">     
         <form>
-            <input type="file" name="myFile"><br>
+            <label for="imageField">
+                <select name="" id="imageField">
+                    <option value="">Select an image</option>
+                    <option value="burger">Burger</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="ugali">Ugali</option>
+                    <option value="rice">Rice</option>
+                    <option value="fish">Fish</option>
+                    <option value="bhajia">Bhajia</option>
+                </select>
+            </label>
+            <br>
              
             <label for="Name">Name</label>
             <input type="text" id="name" name="name">
@@ -19,13 +36,14 @@
             <input type="text" name="description" id="description">
             
             <label for="Price">Price</label>
-            <input type="number" id="price" name="price">
+            <input placeholder="0" type="number" id="price" min="1" name="price">
 
             <button type="button" id="addmeal">Create meal item</button>
             </div>
         
         </form>      
     </div>
+    <script src="../assets/js/base.js"></script>
     <script src="../assets/js/add.js"></script>
 </body>
 </html>

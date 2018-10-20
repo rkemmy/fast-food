@@ -7,7 +7,7 @@ window.onload = function () {
     }
 
 
-    fetch('https://mealani.herokuapp.com/api/v2/menu', {
+    fetch('http://127.0.0.1:5000/api/v2/menu', {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -24,7 +24,7 @@ window.onload = function () {
         output += `
             <div class="column">
                 <p>
-                    <img class="zoom" src="../../assets/images/rice.jpeg" alt="">
+                  <img class="zoom" src="${images[item.img] || images["default"]}" alt="image">
                 </p>
                 <button class="price">${item["price"]}</button>
                 <p>
@@ -41,10 +41,13 @@ window.onload = function () {
       document.getElementById("row").innerHTML = output;
   
     })
+    .catch(function(error){
+        console.log(error);
+      })
   }
   
   function delete_order(id){
-    fetch(`https://mealani.herokuapp.com/api/v2/menu/${id}`,{
+    fetch(`http://127.0.0.1:5000/api/v2/menu/${id}`,{
         method:"DELETE",
         mode:'cors',
         headers:{
@@ -58,17 +61,20 @@ window.onload = function () {
         alert(data["message"])
         redirect: window.location.replace('../admin/meals.html');
     })
+    .catch(function(error){
+        console.log(error);
+      })
   }
 
-// var logout =  document.getElementById('loginSignup')
-// logout.onclick = function(){
-//     if (window.localStorage.getItem('username') == null){
-//         redirect: window.location.replace(".login.html");
-//     }
-//     else{
-//         localStorage.clear();
-//         redirect: window.location.replace(".index.html")
-//     }
-// }
+var logout =  document.getElementById('loginSignup')
+logout.onclick = function(){
+    if (window.localStorage.getItem('username') == null){
+        redirect: window.location.replace(".login.html");
+    }
+    else{
+        localStorage.clear();
+        redirect: window.location.replace(".index.html")
+    }
+}
   
   
