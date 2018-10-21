@@ -22,7 +22,7 @@ fetch('http://127.0.0.1:5000/api/v2/users/orders', {
       let order_id = res['id'];
       output += `
 
-          <tr>
+          <tr id="orderly">
               <td class="order_id">${res['id']}</td>
               <td>${res['name']}</td>
               <td>${res['username']}</td>

@@ -10,7 +10,7 @@ fetch('http://127.0.0.1:5000/api/v2/users/history', {
     .then(data => {
       let output = ` <table id="cartable">
       <tr>
-      <th>Order-id</th>
+      <th>Order-item</th>
       <th>Name</th>
       <th>Description</th>
       <th>Price</th>
@@ -21,10 +21,10 @@ fetch('http://127.0.0.1:5000/api/v2/users/history', {
           total += item.price
 
         output += `
-            <tr>
-                <td class="order_id">${item['id']}</td>
-                <td>${item['name']}</td>
-                <td>${item['description']}</td>
+            <tr id="cart">
+                <td class="order_id"><img src="${images[item.img] || images["default"]}" alt="image"></td>
+                <td>${ellipsis(item["name"])}</td>
+                <td>${ellipsis(item["description"])}</td>
                 <td>${item['price']}</td>
                 
             </tr>
@@ -44,3 +44,10 @@ fetch('http://127.0.0.1:5000/api/v2/users/history', {
     .catch(function(error){
       console.log(error);
     })
+
+function ellipsis(string){
+  if (string.length >= 10)
+      return string.substring(0, 10) + '...';
+  else
+      return string;
+};
