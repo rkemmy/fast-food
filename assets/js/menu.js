@@ -35,11 +35,11 @@ fetch('http://127.0.0.1:5000/api/v2/menu', {
             <p>
             ${item["description"]}
             </p>
-            <button id="orderMeal" class="OrderNow"  onclick="createOrder('${item["name"]}')">Order Now</button>
+            <button id="orderMeal" class="OrderNow"  onclick="checkout('${item["name"]}', '${item["price"]}')">Add to Cart</button>
         </div>`
     })
 
-    document.getElementById("row").innerHTML = output;
+    document.getElementById("menu-row").innerHTML = output;
 
   })
   .catch(function(error){
@@ -47,18 +47,67 @@ fetch('http://127.0.0.1:5000/api/v2/menu', {
   })
 
 
+let cart_items_arr = [];
 
-function createOrder(name) {
+function checkout(name, price) {
+  if (window.localStorage.username === "Useradmin") {
+    alert("Admin cannot place an order")
+    redirect: window.location.replace("admin/portal.html");  
+  } 
+  else {
+    let newItem = `<tr id="cart-item-${name}">
+                    <td class="new-item">${name}</td>
+                    <td>
+                      <label for="quantity">Quantity</label>
+                      <input value="1" type="number" id="${name}" class="item-quantity" min="1" name="price">
+                    </td>
+                    <td class="new-item" id="item-price-${name}">${price}</td>
+                    <td id="item-total-price-${name}">${price}</td>
+                    <td><a href="#" onClick="deleteOrder(this)"><i class="far fa-trash-alt"></i></a></td>
+                  </tr>`
+    if (cart_items_arr.includes(name) === false) {
+      document.getElementById("order-table").innerHTML += newItem
+    }
+    cart_items_arr.push(name);
+  } 
+}
+
+function total(name) {
+  return function getTotal() {
+    console.log('val', this.value);
+    itemPrice = document.getElementById(`item-price-${name}`).innerHTML;
+    console.log('iprice',itemPrice);
+    document.getElementById(`item-total-price-${name}`).innerHTML = (itemPrice * this.value);
+  };
+}
+
+function cart() {
+  // get item quantity
+  quantity_elems = document.querySelectorAll(".item-quantity")
+  console.log('elems', quantity_elems);
+
+  Array.from(quantity_elems).forEach((elem) => {
+    elem.addEventListener('change', total(elem.id));
+  });
+};
+
+
+function deleteOrder(del) {
+  var p=del.parentNode.parentNode;
+      p.parentNode.removeChild(p);
+ }
+
+
+function chickout(name) {
     if (window.localStorage.username === "Useradmin") {
     alert("Admin cannot place an order")
     redirect: window.location.replace("admin/portal.html");
     
   }
   else {
-
     fetch('http://127.0.0.1:5000/api/v2/users/orders', {
       method: "POST",
-      mode: 'cors',
+      // mode: 'no-cors',
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
@@ -70,16 +119,17 @@ function createOrder(name) {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         alert(data["message"])
         redirect: window.location.replace('index.html');
-    })
+      })
     .catch(function(error){
       console.log(error);
     })
   }
 
 }
+
+
 
 
 var logout = document.getElementById('loginSignup')

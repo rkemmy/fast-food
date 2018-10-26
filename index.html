@@ -5,12 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="assets/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     </head>
     <body>
         <div class="topnav" id="navbar">
             <a href="#" id ="logo" class="food" >Fast-Food-Fast</a>
             <a href="history.html">Profile</a>
-            <a href="cart.html">Cart</a>
             <div id="loginSignup"></div>
             <div id="account"></div>
         </div>
@@ -25,7 +25,22 @@
     
             </section>
         </div>
-        <div id="row">
+        <div class="index">
+            <div id="menu-row"></div>
+            <div id="user-cart">
+                <h4 class="user-shop-cart">Shopping cart</h4>
+                <table id="order-table" onchange="cart()">
+                    <tr id="checkout"> 
+                        <th>Name</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Delete</th>
+                    </tr> 
+                </table>
+                <button id="chickout">Checkout</button>
+            </div>
+        </div>
             
         </div>
         
