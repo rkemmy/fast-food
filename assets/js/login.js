@@ -25,12 +25,8 @@ login.onclick = function(){
             document.getElementById('password').value = "";
             window.localStorage.setItem('token', data['token'])
             window.localStorage.setItem('username', username)
-           
-
-            redirect: window.location.replace("../html/index.html")
             window.localStorage.setItem('message', msg);
             let elem = document.getElementById('login-dialogbox')
-            
             if (data["admin"] === true){
                 redirect: window.location.replace("admin/portal.html")
             }

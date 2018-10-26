@@ -48,10 +48,9 @@ fetch('http://127.0.0.1:5000/api/v2/users/orders', {
     let order_id = document.getElementById("row").querySelector(".order_id").innerHTML
     status_listener(order_id)
     
-    // console.log(output)
   })
   .catch(function(error){
-    window.location = "../index.html"
+    console.log(error)
   })
 
 function status_listener(id){
