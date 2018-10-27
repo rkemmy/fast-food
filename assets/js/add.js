@@ -1,55 +1,49 @@
-window.onload = function () {
-
-  if (window.localStorage.getItem('username') !== 'Useradmin'){
-      window.location = "../index.html"
-  }
-  if (window.localStorage.getItem('username') == null){
-    document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Login </a>`;
-}
-  else{
-    document.getElementById('loginSignup').innerHTML = `<a href="../login.html">Logout</a>`;
+if (window.localStorage.getItem('username') !== 'Useradmin'){
+  redirect: window.location.replace("../index.html");
 }
 
-  var addMeal = document.getElementById('addmeal');
+var addMeal = document.getElementById('addmeal');
 
-  addMeal.onclick = function () {
-    const img = document.getElementById('imageField').value;
-    const name = document.getElementById('name').value;
-    const description = document.getElementById('description').value;
-    const price = Number(document.getElementById('price').value);
-    console.log(typeof(price));
+addMeal.onclick = function () {
+  const img = document.getElementById('imageField').value;
+  const name = document.getElementById('name').value;
+  const description = document.getElementById('description').value;
+  const price = Number(document.getElementById('price').value);
+  
 
-    fetch('http://127.0.0.1:5000/api/v2/menu', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + window.localStorage.getItem('token')
-      },
-      body: JSON.stringify({
-        name,
-        description,
-        price,
-        img
-      })
+  fetch('http://127.0.0.1:5000/api/v2/menu', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + window.localStorage.getItem('token')
+    },
+    body: JSON.stringify({
+      name,
+      description,
+      price,
+      img
     })
-    // console.log(data)
-      .then(res => res.json())
-      .then(data => {
-        if (data['message'] === 'Meal successfully created') {
-          alert('Meal successfully created')
-          // clear the form
+  })
+    .then(res => res.json())
+    .then(data => {
+      let mesg = 'Meal successfully created'      
+      if (data['message'] === mesg) {
+        let addEelem = document.getElementById('add-dialogbox')
+        addEelem.innerHTML = mesg;
+        setTimeout(() => {
           redirect: window.location.replace("meals.html");
-        }
-        else {
-          alert('Meal has been not been created, try again')
-        }
+        }, 2500);
+      }
+      else {
+        alert('Meal has been not been created, try again')
+      }
 
-      })
-      .catch(function(error){
-        console.log()
-      })
-  }
+    })
+    .catch(function(error){
+      console.log()
+    })
 }
+
 
 var logout =  document.getElementById('loginSignup')
 logout.onclick = function(){

@@ -19,19 +19,14 @@ login.onclick = function(){
 
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         let msg = 'You were successfully logged in ' + username;
         if (data['message'] === msg){
             document.getElementById('username').value = "";
-            document.getElementById('password').value = "";``
+            document.getElementById('password').value = "";
             window.localStorage.setItem('token', data['token'])
             window.localStorage.setItem('username', username)
-           
-
-            redirect: window.location.replace("../html/index.html")
             window.localStorage.setItem('message', msg);
-            elem = document.getElementById('dialogbox')
-            
+            let elem = document.getElementById('login-dialogbox')
             if (data["admin"] === true){
                 redirect: window.location.replace("admin/portal.html")
             }
