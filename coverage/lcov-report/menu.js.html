@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for menu.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> menu.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/47</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+<span class="cstat-no" title="statement not covered" >if (window.localStorage.getItem('message')) {</span>
+<span class="cstat-no" title="statement not covered" >  meso = window.localStorage.getItem('message');</span>
+<span class="cstat-no" title="statement not covered" >  elem = document.getElementById('login-dialogbox');</span>
+<span class="cstat-no" title="statement not covered" >  elem.innerHTML = `${meso}`;</span>
+<span class="cstat-no" title="statement not covered" >  window.localStorage.removeItem('message');</span>
+<span class="cstat-no" title="statement not covered" >  setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; </span>{</span>
+<span class="cstat-no" title="statement not covered" >    elem.style.display = "None";</span>
+  }, 2000);
+}
+&nbsp;
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >fetch('http://127.0.0.1:5000/api/v2/menu', {</span>
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + window.localStorage.getItem('token')
+  }
+})
+  .then(<span class="fstat-no" title="function not covered" >res =&gt; <span class="cstat-no" title="statement not covered" ></span>res.json())</span>
+  .then(<span class="fstat-no" title="function not covered" >data =&gt; </span>{
+    let output = <span class="cstat-no" title="statement not covered" >'';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    data['food_items'].forEach(<span class="fstat-no" title="function not covered" >item =&gt; </span>{</span>
+<span class="cstat-no" title="statement not covered" >      output += `</span>
+        &lt;div class="column styled-item"&gt;
+            &lt;p&gt;
+                &lt;img src="${images[item.img] || images["default"]}" alt="image"&gt;
+            &lt;/p&gt;
+            &lt;button class="price"&gt;${item["price"]}&lt;/button&gt;
+            &lt;p&gt;
+                ${item["name"]}
+            &lt;/p&gt;
+            &lt;p&gt;
+            ${item["description"]}
+            &lt;/p&gt;
+            &lt;button id="orderMeal" class="OrderNow"  onclick="checkout('${item["name"]}', '${item["price"]}')"&gt;Add to Cart&lt;/button&gt;
+        &lt;/div&gt;`
+    })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    document.getElementById("menu-row").innerHTML = output;</span>
+&nbsp;
+  })
+  .catch(<span class="fstat-no" title="function not covered" >function(</span>error){
+<span class="cstat-no" title="statement not covered" >    console.log(error);</span>
+  })
+&nbsp;
+&nbsp;
+let cart_items_arr = <span class="cstat-no" title="statement not covered" >[];</span>
+&nbsp;
+function <span class="fstat-no" title="function not covered" >checkout(name, price) {</span>
+<span class="cstat-no" title="statement not covered" >  if (window.localStorage.username === "Useradmin") {</span>
+<span class="cstat-no" title="statement not covered" >    alert("Admin cannot place an order")</span>
+<span class="cstat-no" title="statement not covered" >    redirect: <span class="cstat-no" title="statement not covered" >w</span>indow.location.replace("admin/portal.html");  </span>
+  } 
+  else {
+    let newItem = `<span class="cstat-no" title="statement not covered" >&lt;tr id="cart-item-${name}"&gt;</span>
+                    &lt;td class="new-item"&gt;${name}&lt;/td&gt;
+                    &lt;td&gt;
+                      &lt;label for="quantity"&gt;Quantity&lt;/label&gt;
+                      &lt;input value="1" type="number" id="${name}" class="item-quantity" min="1" name="price"&gt;
+                    &lt;/td&gt;
+                    &lt;td class="new-item" id="item-price-${name}"&gt;${price}&lt;/td&gt;
+                    &lt;td id="item-total-price-${name}"&gt;${price}&lt;/td&gt;
+                    &lt;td&gt;&lt;a href="#" onClick="deleteOrder(this)"&gt;&lt;i class="far fa-trash-alt"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                  &lt;/tr&gt;`
+<span class="cstat-no" title="statement not covered" >    if (cart_items_arr.includes(name) === false) {</span>
+<span class="cstat-no" title="statement not covered" >      document.getElementById("order-table").innerHTML += newItem</span>
+    }
+<span class="cstat-no" title="statement not covered" >    cart_items_arr.push(name);</span>
+  } 
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >total(name) {</span>
+<span class="cstat-no" title="statement not covered" >  return function <span class="fstat-no" title="function not covered" >getTotal() {</span></span>
+<span class="cstat-no" title="statement not covered" >    console.log('val', this.value);</span>
+<span class="cstat-no" title="statement not covered" >    itemPrice = document.getElementById(`item-price-${name}`).innerHTML;</span>
+<span class="cstat-no" title="statement not covered" >    console.log('iprice',itemPrice);</span>
+<span class="cstat-no" title="statement not covered" >    document.getElementById(`item-total-price-${name}`).innerHTML = (itemPrice * this.value);</span>
+  };
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >cart() {</span>
+  // get item quantity
+<span class="cstat-no" title="statement not covered" >  quantity_elems = document.querySelectorAll(".item-quantity")</span>
+<span class="cstat-no" title="statement not covered" >  console.log('elems', quantity_elems);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  Array.from(quantity_elems).forEach((<span class="fstat-no" title="function not covered" >elem) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >    elem.addEventListener('change', total(elem.id));</span>
+  });
+};
+&nbsp;
+&nbsp;
+function <span class="fstat-no" title="function not covered" >deleteOrder(del) {</span>
+  var p=<span class="cstat-no" title="statement not covered" >del.parentNode.parentNode;</span>
+<span class="cstat-no" title="statement not covered" >      p.parentNode.removeChild(p);</span>
+ }
+&nbsp;
+&nbsp;
+function <span class="fstat-no" title="function not covered" >chickout(name) {</span>
+<span class="cstat-no" title="statement not covered" >    if (window.localStorage.username === "Useradmin") {</span>
+<span class="cstat-no" title="statement not covered" >    alert("Admin cannot place an order")</span>
+<span class="cstat-no" title="statement not covered" >    redirect: <span class="cstat-no" title="statement not covered" >w</span>indow.location.replace("admin/portal.html");</span>
+    
+  }
+  else {
+<span class="cstat-no" title="statement not covered" >    fetch('http://127.0.0.1:5000/api/v2/users/orders', {</span>
+      method: "POST",
+      // mode: 'no-cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + window.localStorage.getItem('token')
+      },
+      body: JSON.stringify({
+        "name": name
+      })
+    })
+      .then(<span class="fstat-no" title="function not covered" >res =&gt; <span class="cstat-no" title="statement not covered" ></span>res.json())</span>
+      .then(<span class="fstat-no" title="function not covered" >data =&gt; </span>{
+<span class="cstat-no" title="statement not covered" >        alert(data["message"])</span>
+<span class="cstat-no" title="statement not covered" >        redirect: <span class="cstat-no" title="statement not covered" >w</span>indow.location.replace('index.html');</span>
+      })
+    .catch(<span class="fstat-no" title="function not covered" >function(</span>error){
+<span class="cstat-no" title="statement not covered" >      console.log(error);</span>
+    })
+  }
+&nbsp;
+}
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+var logout = <span class="cstat-no" title="statement not covered" >document.getElementById('loginSignup')</span>
+<span class="cstat-no" title="statement not covered" >logout.onclick = <span class="fstat-no" title="function not covered" >function () </span>{</span>
+<span class="cstat-no" title="statement not covered" >  if (window.localStorage.getItem('username') == null) {</span>
+<span class="cstat-no" title="statement not covered" >    redirect: <span class="cstat-no" title="statement not covered" >w</span>indow.location.replace(".login.html");</span>
+  }
+  else {
+<span class="cstat-no" title="statement not covered" >    localStorage.clear();</span>
+<span class="cstat-no" title="statement not covered" >    redirect: <span class="cstat-no" title="statement not covered" >w</span>indow.location.replace(".index.html")</span>
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Nov 13 2018 18:09:01 GMT+0300 (East Africa Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for orders.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> orders.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/25</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >fetch('http://127.0.0.1:5000/api/v2/users/orders', {</span>
+  method: 'GET',
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + window.localStorage.getItem('token')
+  }
+})
+  .then(<span class="fstat-no" title="function not covered" >res =&gt; <span class="cstat-no" title="statement not covered" ></span>res.json())</span>
+  .then(<span class="fstat-no" title="function not covered" >data =&gt; </span>{
+    let output = `<span class="cstat-no" title="statement not covered" > &lt;table id="ordertable"&gt;</span>
+    &lt;tr&gt;
+    &lt;th&gt;Order-id&lt;/th&gt;
+    &lt;th&gt;Order-Name&lt;/th&gt;
+    &lt;th&gt;Username&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+    &lt;th&gt;Status&lt;/th&gt;
+    &lt;/tr&gt;`;
+    
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    data["orders"].forEach(<span class="fstat-no" title="function not covered" >res =&gt; </span>{</span>
+      let order_id = <span class="cstat-no" title="statement not covered" >res['id'];</span>
+<span class="cstat-no" title="statement not covered" >      output += `</span>
+&nbsp;
+          &lt;tr id="orderly"&gt;
+              &lt;td class="order_id"&gt;${res['id']}&lt;/td&gt;
+              &lt;td&gt;${res['name']}&lt;/td&gt;
+              &lt;td&gt;${res['username']}&lt;/td&gt;
+              &lt;td&gt;${res['price']}&lt;/td&gt;
+              &lt;td&gt;
+                &lt;select&gt;
+                    &lt;option value="New" selected&gt;New&lt;/option&gt;
+                    &lt;option value="Processing"&gt;Processing&lt;/option&gt;
+                    &lt;option value="Complete"&gt;Complete&lt;/option&gt;
+                    &lt;option value="Cancelled"&gt;Cancelled&lt;/option&gt;
+                    
+                &lt;/select&gt;
+              &lt;/td&gt;
+              
+&nbsp;
+          &lt;/tr&gt;`
+    })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    output +=</span>
+      `&lt;/table&gt;`
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    document.getElementById("row").innerHTML = output;</span>
+    let order_id = <span class="cstat-no" title="statement not covered" >document.getElementById("row").querySelector(".order_id").innerHTML</span>
+<span class="cstat-no" title="statement not covered" >    status_listener(order_id)</span>
+    
+  })
+  .catch(<span class="fstat-no" title="function not covered" >function(</span>error){
+<span class="cstat-no" title="statement not covered" >    console.log(error)</span>
+  })
+&nbsp;
+function <span class="fstat-no" title="function not covered" >status_listener(id){</span>
+let options = <span class="cstat-no" title="statement not covered" >document.querySelectorAll('select');</span>
+<span class="cstat-no" title="statement not covered" >for(let option of options){</span>
+<span class="cstat-no" title="statement not covered" >  option.addEventListener('change', <span class="fstat-no" title="function not covered" >function()</span>{</span>
+<span class="cstat-no" title="statement not covered" >    update_status(id, option.value)</span>
+&nbsp;
+  }
+  )}
+} 
+&nbsp;
+function <span class="fstat-no" title="function not covered" >update_status(id, status){</span>
+<span class="cstat-no" title="statement not covered" >    fetch(`http://127.0.0.1:5000/api/v2/users/orders/${id}`,{</span>
+        method:"PUT",
+        mode:'cors',
+        headers:{
+            'Content-Type': 'application/json',
+            'Authorization' : 'Bearer ' + window.localStorage.getItem('token')
+        }, 
+        body: JSON.stringify({
+            "status": status
+        })
+    })
+    .then(<span class="fstat-no" title="function not covered" >res=&gt;<span class="cstat-no" title="statement not covered" ></span>res.json())</span>
+    .then(<span class="fstat-no" title="function not covered" >data =&gt;</span>{
+<span class="cstat-no" title="statement not covered" >      alert(`Order ${id} updated successfully. New status: ${status}`)</span>
+&nbsp;
+        
+    })
+    .catch(<span class="fstat-no" title="function not covered" >function(</span>error){
+<span class="cstat-no" title="statement not covered" >      console.log(error)</span>
+    })
+}
+&nbsp;
+var logout =  <span class="cstat-no" title="statement not covered" >document.getElementById('loginSignup')</span>
+<span class="cstat-no" title="statement not covered" >logout.onclick = <span class="fstat-no" title="function not covered" >function()</span>{</span>
+<span class="cstat-no" title="statement not covered" >    if (window.localStorage.getItem('username') == null){</span>
+<span class="cstat-no" title="statement not covered" >        redirect: <span class="cstat-no" title="statement not covered" >w</span>indow.location.replace(".login.html");</span>
+    }
+    else{
+<span class="cstat-no" title="statement not covered" >        localStorage.clear();</span>
+<span class="cstat-no" title="statement not covered" >        redirect: <span class="cstat-no" title="statement not covered" >w</span>indow.location.replace(".index.html")</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Nov 13 2018 18:09:01 GMT+0300 (East Africa Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

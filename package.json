@@ -1,0 +1,21 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jest.config.js --coverage -u"
+  },
+  "jest": {
+    "automock": false,
+    "preset": "jest-puppeteer"
+  },
+  "author": "Risper",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.5.1",
+    "puppeteer": "^1.9.0"
+  },
+  "dependencies": {}
+}
